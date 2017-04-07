@@ -4,7 +4,7 @@ module.exports = {
   port:1234,
   proxy: {
     '/api': {
-      target: 'http://localhost:8081',
+      target: 'http://localhost:3000',
       agent: createAgent(),
       onProxyRes: onProxyRes,
       secure: false

@@ -1,11 +1,9 @@
 # installation
 in a shell:
 * `npm i`
-* `dotnet restore`
 
 # launch the server
-* Open the solution (server.sln)
-* Run the web project (CTRL+F5)
+* `npm run server`
 
 # launch the client and see the issue
 * In index.js, the 2nd http request should be commented

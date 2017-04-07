@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "server": "node windowsAuthServer.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "agentkeepalive": "^3.1.0",
+    "express": "https://registry.npmjs.org/express/-/express-4.15.2.tgz",
+    "node-sspi": "^0.1.14",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
   }

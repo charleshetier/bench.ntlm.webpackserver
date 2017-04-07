@@ -4,8 +4,7 @@ module.exports = {
   port:1234,
   proxy: {
     '/api': {
-      target: 'http://localhost:26100',
-      //target: 'http://www.google.fr',
+      target: 'http://localhost:8081',
       agent: createAgent(),
       onProxyRes: onProxyRes,
       secure: false
@@ -35,14 +34,6 @@ function onProxyRes(proxyRes, req) {
  * @returns {Agent}
  */
 function createAgent() {
-  // return new Agent({
-  //   // maxSockets: 1000,       // The max amount of simultaneous sockets
-  //   // keepAlive: true,
-  //   // maxFreeSockets: 1024,
-  //   keepAliveMsecs:10,
-  //   // timeout: 10000,          // 10s. Warning, If a request is longer than 10s, this value should be increased
-  //   // keepAliveTimeout: 5000   // after 5s of inactivity, there should have a new negotiation
-  // });
 
   return new Agent({
     maxSockets: 100,       // The max amount of simultaneous sockets

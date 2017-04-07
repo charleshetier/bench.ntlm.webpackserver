@@ -5,3 +5,4 @@ project.lock.json
 bin
 obj
 wwwroot
+*.log

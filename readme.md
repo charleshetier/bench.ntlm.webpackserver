@@ -1,11 +1,19 @@
 # installation
-npm i
-dotnet restore
+in a shell:
+* `npm i`
+* `dotnet restore`
 
-# The issue
-* lancer le server (solution vs: CTRL+F5)
-* commenter la requete dans index.js
-* lancer le dev-server
-* aller sur localhost:1234
-* décommenter la requete
-* and boom (authentication popup)
+# launch the server
+* Open the solution (server.sln)
+* Run the web project (CTRL+F5)
+
+# launch the client and see the issue
+* In index.js, the 2nd http request should be commented
+```javascript
+// ******  Should be commented at startup ********
+//httpGetAsync('api/Home/action1?toto=boom', handler);
+```
+* start the client: in a shell: `npm start`
+* navigate to http://localhost:1234 (the port is defined in devServer.js)
+* In index.js, uncomment the index.js
+* auto-refresh... and boom! (authentication popup)

@@ -13,5 +13,5 @@ in a shell:
 ```
 * start the client: in a shell: `npm start`
 * navigate to http://localhost:1234 (the port is defined in devServer.js)
-* In index.js, uncomment the index.js
+* In index.js, uncomment the line 11 `//httpGetAsync('api/Home/action1?toto=boom', handler);`
 * auto-refresh... and boom! (authentication popup)
